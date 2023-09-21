@@ -1,0 +1,13 @@
+- review Leap as  a fw for the lts
+- Support countries later on
+- Is there data diff from LEAP (review) and then engage with the sector leads for collating of thoughts (GET LTS report as well)
+- Check on the levers of ambition as well and improve on them
+- Deployment (tech to be used in the data and how to implement it in the data)
+- Refrencing of the data of the sector leads.
+- Look through all the sector leads so that we know the data + assumptions used in the data.
+- Get in touch with SAI guys (Pacifica guys)
+- User preference methods stakeholder engagement.
+- Continue to develop the model such that all the data provided will be used to guide their decisions on the creation of a model that goes to net zero
+- Meets as sectors and show the model is.
+- Meet Elec, then Transport then Land use.
+- Causes of the unsmooth data (how to make continuous)

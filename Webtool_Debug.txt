@@ -1,0 +1,13 @@
+- In debugging we started by cleaning L140 in the control sheet where we changed by removing the removing iferrors in the model (We removed the insulation aspect)- This worked
+- In the next error it was found in the model L3554 where there was an @ sign at the second min which shouldn't have been there at least for the first variable in the minimization
+- the third error was in line ModelL12100 =@ CapLvr.eNatG. * PrefUnitConversionFactor.Power_to_AnnualEnergy. * TimeShrWint. * @ LFWint.eNatG. was present instead of =@ CapLvr.eNatG. * PrefUnitConversionFactor.Power_to_AnnualEnergy. * TimeShrWint. * LFWint.eNatG.
+- Fourth error ModelL12119 and ModelL12120 =@ CapLvr.ePI. * PrefUnitConversionFactor.Power_to_AnnualEnergy. * TimeShrSum. * (@)LFSum.ePI. (solution)
+- Fifth error ModelL12187 and ModelL12179 =@ ActvWint.ePI. * PrefUnitConversionFactor.AnnualEnergy_to_Power. / (TimeShrWint. * (@)LFWint.ePI.) (solution)
+- Sixth error ModelL12205 and Model 12207 =@ ActvSum.ePI. * PrefUnitConversionFactor.AnnualEnergy_to_Power. / (TimeShrSum. * (@) LFSum.ePI.)
+- Seventh error ModelL12387 
+- eighth error FullTimeseries J3419 = +(@ShrTimePrdBeg.fts.* SUMIFS(CapReq.eNatG., Prd.,@ PrdBeg.fts.))
++(@ShrTimePrdEnd.fts.* SUMIFS(CapReq.eNatG., Prd.,@ PrdEnd.fts.)) - reducing the whitespace in the multiplication
+
+- ninth error Model L12434:12437 =@Cap.eGeoT. * PeakCCShr.eGeoT. (solution) =@ Cap.eGeoT. * PeakCCShr.eGeoT. (problem)
+- Tenth error Model L12464 The error was the newline added to after PeakCC.eALLc.fElc. =IFERROR( MAX(0, 0 +@PeakCC.eALLc.fElc. -@PeakCC.eBccs. -@PeakCC.eNuc. -@PeakCC.eHyd. -@PeakCC.eWons. -@PeakCC.eWoff. -@PeakCC.eSol. -@PeakCC.eTidS. -@PeakCC.eTidR. -@PeakCC.eWav. -@PeakCC.eBio. -@PeakCC.eGccs. -@PeakCC.eCoal. -@PeakCC.eGas. -@PeakCC.eSsnStr. -@PeakCC.eInt. -@PeakCC.eDShiftDSR. -@PeakCC.eDShiftVtG. -@PeakCC.eDShiftBat. )
+ / PeakCCShr.eGasPk.,0) (solution)
